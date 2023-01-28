@@ -18,17 +18,8 @@ table tr td{
     color: blue;
     border: 1px solid black;
 }
-table tr td : hover{
-  cursor: pointer;
-}
-
-/*
- blue pink yellow green red purple orange white disco
-*/
-
 
 tr:nth-child(odd) td:nth-child(even),
 tr:nth-child(even) td:nth-child(odd){
   background-color: white;
-  font
 }
