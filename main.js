@@ -1,24 +1,31 @@
-var move = 1 ;
-var play = true;
+var move = 1 ;    //for switching players after each move
+var play = true;   
 
 $("#board tr td").click(function(){
+   //clicking on empty box => add the mark
    if( $(this).text().trim()=== "" && play === true){
+      // X's move
      if ( (move%2) === 1 ){
           $(this).append("X");
      }
+      // O's move
       else if ( (move%2) === 0){
             $(this).append("O");
        }
        move++;
-       if ( findwinner()!=-1 && findwinner()!=""){
+      //winner found
+       if ( findwinner()!=-1){
          play=false;
          $('body').append("Congrats ... The winner is "+ findwinner());
          console.log("hello");
        }
+      //tie match
        else if(move==10){
          $('body').append("   Oops.. Its a tie");
        }
    }
+   
+   //clicking on already filled box
    else{
      window.alert("Enter correct input");
    }
@@ -34,6 +41,8 @@ function findwinner(){
   var v7=$('tr:nth-child(3) td:nth-child(1)').text().trim();
   var v8=$('tr:nth-child(3) td:nth-child(2)').text().trim();
   var v9=$('tr:nth-child(3) td:nth-child(3)').text().trim();
+   
+   //checking win conditions one by one
    
    //first row
   if(v1===v2 && v2===v3){
