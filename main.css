@@ -19,7 +19,9 @@ table tr td{
     border: 1px solid black;
 }
 
+//targeting alternate boxes and making them white
 tr:nth-child(odd) td:nth-child(even),
-tr:nth-child(even) td:nth-child(odd){
+tr:nth-child(even) td:nth-child(odd)
+{
   background-color: white;
 }
