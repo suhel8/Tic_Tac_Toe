@@ -1,4 +1,4 @@
-*, *::before, *::after{
+*{
  padding : 0;
  font-size: 60px;
 }
@@ -19,7 +19,7 @@ table tr td{
     border: 1px solid black;
 }
 
-//targeting alternate boxes and making them white
+/* targeting alternate boxes and making them white */
 tr:nth-child(odd) td:nth-child(even),
 tr:nth-child(even) td:nth-child(odd)
 {
